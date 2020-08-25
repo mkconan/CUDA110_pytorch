@@ -61,7 +61,7 @@ for n in range(image_file_num):
     if(n % 10 == 0):
         print("\r load %04d/%04d" % (n, image_file_num), end="")
 
-    fname = "../../Src(train)/%04d.png" % (n)
+    fname = "/src_data/%04d.png" % (n)
     img_load = Image.open(fname)
     img_load = np.asarray(img_load)
 

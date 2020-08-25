@@ -28,6 +28,9 @@ RUN apt update && apt install curl xz-utils -y --no-install-recommends && NCCL_D
 FROM python:3.8
 
 WORKDIR /LayerCNN
+ 
+COPY train_time_ver27.py WORKDIR
+COPY model_skip50.py WORKDIR
 
 RUN pip install torch Pillow numpy
 
