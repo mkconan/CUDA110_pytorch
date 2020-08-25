@@ -27,11 +27,11 @@ RUN apt update && apt install curl xz-utils -y --no-install-recommends && NCCL_D
 
 FROM python:3.8
 
+RUN pip install torch Pillow numpy
+
 WORKDIR /LayerCNN
  
 COPY train_time_ver27.py /LayerCNN/
 COPY model_skip50.py /LayerCNN/
-
-RUN pip install torch Pillow numpy
 
 ENV LIBRARY_PATH /usr/local/cuda/lib64/stubs
