@@ -29,8 +29,8 @@ FROM python:3.8
 
 WORKDIR /LayerCNN
  
-COPY train_time_ver27.py WORKDIR
-COPY model_skip50.py WORKDIR
+COPY train_time_ver27.py /LayerCNN/
+COPY model_skip50.py /LayerCNN/
 
 RUN pip install torch Pillow numpy
 
